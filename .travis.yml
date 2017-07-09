@@ -9,7 +9,7 @@ before_install:
   - sudo apt-get -qq update
 
 install:
-  - apt-get install docker.io
+  - sleep 30
 
 script:
   - bash ls
