@@ -9,7 +9,7 @@ before_install:
   - sudo apt-get -qq update
 
 install:
-  - sleep 30
+  - sleep 20
 
 script:
-  - bash ls
+  - ls
