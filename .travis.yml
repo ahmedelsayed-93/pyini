@@ -10,6 +10,7 @@ before_install:
 
 install:
   - echo ${test}
+  - echo ${test2}
   - sleep 20
 
 script:
