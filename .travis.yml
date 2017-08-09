@@ -9,6 +9,7 @@ before_install:
   - sudo apt-get -qq update
 
 install:
+  - echo ${test}
   - sleep 20
 
 script:
