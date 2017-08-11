@@ -1,17 +1,23 @@
-language: python
-sudo: true
-dist: trusty
+matrix:
+  include:
+  
+    - language: python
+      sudo: true
+      dist: trusty
+      python:
+        - 3.5.2
+      script:
+        - echo "Job1"
+        - echo ${test}
+        - echo ${test2}
 
-pyhon:
-  - 3.5.2
 
-before_install:
-  - sudo apt-get -qq update
-
-install:
-  - echo ${test}
-  - echo ${test2}
-  - sleep 20
-
-script:
-  - ls
+    - language: python
+      sudo: true
+      dist: trusty
+      python:
+        - 3.5.2
+      script:
+        - echo "Job2"
+        - echo ${test}
+        - echo ${test2}
