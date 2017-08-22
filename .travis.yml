@@ -8,6 +8,7 @@ matrix:
         - 3.5.2
       script:
         - pwd
+        - ls
         - echo "Job1"
         - echo ${test}
         - echo ${test2}
