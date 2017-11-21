@@ -1,25 +1,13 @@
+language: python
 matrix:
   include:
-  
-    - language: python
-      sudo: true
-      dist: trusty
-      python:
-        - 3.5.2
-      script:
-        - pwd
-        - ls
-        - echo "Job1"
-        - echo ${test}
-        - echo ${test2}
+  - python: "2.7"
+    env: TEST_SUITE=ACL
+  - python: "2.7"
+    env: TEST_SUITE=OVC
+  - python: "3.5"
+    env: TEST_SUITE=PORTAL
 
-
-    - language: python
-      sudo: true
-      dist: trusty
-      python:
-        - 3.5.2
-      script:
-        - echo "Job2"
-        - echo ${test}
-        - echo ${test2}
+before_script: echo "before script for testsuite: ${TEST_SUITE}"
+script: echo  "execute test $TEST_SUITE"
+before_script: echo "after script for testsuite: ${TEST_SUITE}"
