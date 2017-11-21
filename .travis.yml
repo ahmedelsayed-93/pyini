@@ -1,4 +1,6 @@
 language: python
+sudo: true
+dist: trusty
 matrix:
   include:
   - python: "2.7"
@@ -7,6 +9,9 @@ matrix:
     env: TEST_SUITE=OVC
   - python: "3.5"
     env: TEST_SUITE=PORTAL
+
+install:
+  - sudo apt install git
 
 before_script: echo "before script for testsuite ${TEST_SUITE}"
 script: echo  "execute test $TEST_SUITE"
