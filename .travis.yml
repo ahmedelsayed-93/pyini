@@ -8,7 +8,9 @@ jobs:
   - python: "2.7"
     env: TEST_SUITE=OVC
   - python: "3.5"
-    env: TEST_SUITE=PORTAL
+    env: 
+     - TEST_SUITE=PORTAL
+    if: ${jobs} =~ /PORTAL/
 
 install:
   - sudo apt install git
