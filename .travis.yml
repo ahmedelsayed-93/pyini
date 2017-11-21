@@ -1,7 +1,7 @@
 language: python
 sudo: true
 dist: trusty
-matrix:
+jobs:
   include:
   - python: "2.7"
     env: TEST_SUITE=ACL
