@@ -8,6 +8,6 @@ matrix:
   - python: "3.5"
     env: TEST_SUITE=PORTAL
 
-before_script: echo "before script for testsuite: ${TEST_SUITE}"
+before_script: echo "before script for testsuite ${TEST_SUITE}"
 script: echo  "execute test $TEST_SUITE"
-before_script: echo "after script for testsuite: ${TEST_SUITE}"
+after_script: echo "after script for testsuite ${TEST_SUITE}"
