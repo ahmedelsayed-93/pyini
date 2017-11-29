@@ -5,6 +5,8 @@ jobs:
   include:
   - python: "2.7"
   - python: "3.5"
+    env:
+    - test=test
 install:
   - sudo apt install git
 
