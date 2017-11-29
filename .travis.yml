@@ -4,20 +4,10 @@ dist: trusty
 jobs:
   include:
   - python: "2.7"
-    env: TEST_SUITE=ACL
-  - python: "2.7"
-    env: 
-     - TEST_SUITE=OVC
-     - job=${jobs}
-     
   - python: "3.5"
-    env: 
-     - TEST_SUITE=PORTAL
-     - job=${jobs}
-
 install:
   - sudo apt install git
 
-before_script: echo "before script for testsuite ${TEST_SUITE} ${job} ${jobs}"
-script: echo  "execute test $TEST_SUITE"
-after_script: echo "after script for testsuite ${TEST_SUITE} ${job} ${jobs}"
+before_script: echo "before script for testsuite ${jobs}"
+script: echo  "execute ${jobs}"
+after_script: echo "after script for testsuite ${jobs}"
