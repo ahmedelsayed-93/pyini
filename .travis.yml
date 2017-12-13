@@ -4,12 +4,5 @@ dist: trusty
 jobs:
   include:
   - python: "2.7"
-  - python: "3.5"
-    env:
-    - test=hhhh
-install:
-  - sudo apt install git
-
-before_script: echo "before script for testsuite ${jobs}"
-script: echo  "execute ${jobs}"
-after_script: echo "after script for testsuite ${jobs} ${test}"
+  
+script: echo "public_var ${public_var}, private_var ${private_var}"
