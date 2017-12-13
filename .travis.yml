@@ -5,4 +5,4 @@ jobs:
   include:
   - python: "2.7"
   
-script: echo "public_var ${public_var}, private_var ${private_var}"
+script: bash test.sh
